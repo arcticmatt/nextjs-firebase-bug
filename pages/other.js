@@ -3,7 +3,7 @@ import Link from "next/link";
 import myFirebase from "../src/myFirebase";
 import { useEffect } from "react";
 
-export default function Home() {
+export default function Other() {
   useEffect(() => {
     // Call this to enable default logging (e.g. logging of page_view events).
     myFirebase();
@@ -16,8 +16,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>Main Page</main>
-      <Link href="/other"><button>Other</button></Link>
+      <main>Other Page</main>
+      <Link href="/"><button>Main</button></Link>
     </div>
   );
 }
+
