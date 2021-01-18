@@ -1,5 +1,10 @@
-TLDR: click around while the network tab is open. The browser history state changes but `page_view` events are not logged.
+# Repo steps
+1. Pull the repo
+2. Run `yarn dev`
+3. Go to http://localhost:3000. Click the "Main" button. Then click the "Other" button. Clicking these buttons performs client-side navigation and changes the browser history state.
+4. While doing the clicking described above, observe the network tab. Filter by "collect." Notice that `page_view` events are not being logged even though the browser history state is changing.
 
+# Issue description
 Repo for the bug described in https://github.com/firebase/firebase-js-sdk/issues/4291#issuecomment-760435133. The issue is also described below.
 
 There is a behavior difference between a Google analytics property linked to Firebase and a Google analytics property that is not linked.
